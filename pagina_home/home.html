@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoFlix - Experiência Premium de Streaming</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="premium.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="#">
+                <div class="neoflix-logo">
+                    <span>NeT</span><span>Flix</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/series.html">Séries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/filmes.html">Filmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/jogos.html">Jogos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bombando</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Minha lista</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Navegue por idiomas
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-globe-americas me-2"></i>Português</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-globe-americas me-2"></i>Inglês</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-globe-americas me-2"></i>Espanhol</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-globe-americas me-2"></i>Francês</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-globe-americas me-2"></i>Alemão</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center text-light">
+                    <div class="search-box me-3">
+                        <button class="btn btn-link text-light">
+                            <i class="fas fa-search fs-5"></i>
+                        </button>
+                    </div>
+                    <div class="notification-bell position-relative me-3">
+                        <button class="btn btn-link text-light position-relative">
+                            <i class="fas fa-bell fs-5"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown">
+                            <img src="./cloneGTA.webp" alt="User" width="36" height="36" class="rounded-circle border border-2 border-danger">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configurações</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-crown me-2 text-danger"></i>Upgrade Premium</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../index.html"><i class="fas fa-sign-out-alt me-2"></i>Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-banner">
+        <div class="hero-container">
+            <div class="featured-content">
+                <img src="./filme4.jpg" alt="Featured Content">
+                <div class="hero-overlay"></div>
+                <div class="featured-details">
+                    <div class="featured-badge mb-4">
+                        <span class="badge-premium">EXCLUSIVO</span>
+                    </div>
+                    <h1>BIÓNICOS</h1>
+                    <p class="feature-info">Experiência Imersiva</p>
+                    <p class="feature-tag">Disponível apenas para assinantes premium</p>
+                    <div class="feature-buttons">
+                        <button class="btn-neo-primary">
+                            <i class="fas fa-gamepad me-2"></i>
+                            Assistir Agora
+                        </button>
+                        <button class="btn-neo-outline">
+                            <i class="fas fa-info-circle me-2"></i>
+                            Detalhes
+                        </button>
+                    </div>
+                    <div class="audio-controls mt-4">
+                        <button class="btn" title="Mudo">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <input type="range" class="volume-slider" min="0" max="100" value="80">
+                        <button class="btn" title="Configurações">
+                            <i class="fas fa-sliders-h"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="row-container">
+            <div class="category-selector mb-4 d-flex flex-wrap">
+                <div class="category-pill active">Todos</div>
+                <div class="category-pill">Ação</div>
+                <div class="category-pill">RPG</div>
+                <div class="category-pill">Aventura</div>
+                <div class="category-pill">Simulação</div>
+                <div class="category-pill">Estratégia</div>
+            </div>
+            
+            <div class="content-row">
+                <div class="content-header">
+                    <h2 class="section-title">Filmes de Elite</h2>
+                    <a href="#" class="see-all">Ver tudo <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="content-slider">
+                    <button class="slider-arrow slider-arrow-left">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-container">
+                        <div class="content-item">
+                            <div class="content-card animated-card">
+                                <img src="./filme1.jpg" alt="Cyber Racer">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="content-title"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card animated-card">
+                                <img src="./filme2.jpg" alt="Space Odyssey">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="content-title"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card animated-card">
+                                <img src="./filme3.jpg" alt="Neon Dimensions">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="content-title"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card animated-card">
+                                <img src="./filme4.jpg" alt="Quantum Break">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="content-title"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card animated-card">
+                                <img src="./filme5.jpg" alt="Future Horizon">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="content-title"></div>
+                                </div>
+                                <div class="badge-tag top-10">TOP 10</div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card animated-card">
+                                <img src="./filme6.webp" alt="Digital Dreams">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="content-title"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-arrow slider-arrow-right">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="content-row">
+                <div class="content-header">
+                    <h2 class="section-title">Continuar assistindo como <span class="profile-name">Ryan</span></h2>
+                    <a href="#" class="see-all">Ver tudo <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="content-slider">
+                    <button class="slider-arrow slider-arrow-left">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-container">
+                        <div class="content-item">
+                            <div class="content-card continue-watching">
+                                <img src="./filme7.jpg" alt="Título 1">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="content-controls">
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Mais informações">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Adicionar à minha lista">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card continue-watching">
+                                <img src="./filme8.jpg" alt="Título 2">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="badge-tag novidade">Novidade</div>
+                                <div class="content-controls">
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Mais informações">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Adicionar à minha lista">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card continue-watching">
+                                <img src="./filme9.jpg" alt="Título 3">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="badge-tag top-10">TOP 10</div>
+                                <div class="content-controls">
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Mais informações">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Adicionar à minha lista">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card continue-watching">
+                                <img src="./filme10.webp" alt="Título 4">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="badge-tag new-season">Nova temporada</div>
+                                <div class="content-controls">
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Mais informações">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Adicionar à minha lista">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card continue-watching">
+                                <img src="./filme11.jpg" alt="Título 5">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="badge-tag new-season">Nova temporada</div>
+                                <div class="content-controls">
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Mais informações">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Adicionar à minha lista">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-arrow slider-arrow-right">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="content-row">
+                <div class="content-header">
+                    <h2 class="section-title">Programas e séries brasileiras</h2>
+                    <a href="#" class="see-all">Ver tudo <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="content-slider">
+                    <button class="slider-arrow slider-arrow-left">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-container">
+                        <div class="content-item">
+                            <div class="content-card">
+                                <img src="./filme12.jpg" alt="Título BR 1">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="content-controls">
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Mais informações">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Adicionar à minha lista">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card">
+                                <img src="./filme13.jpg" alt="Título BR 2">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="content-controls">
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Mais informações">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Adicionar à minha lista">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card">
+                                <img src="./filme14.jpg" alt="Título BR 3">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="content-controls">
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Mais informações">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Adicionar à minha lista">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card">
+                                <img src="./filme15.webp" alt="Título BR 4">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="content-controls">
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Mais informações">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Adicionar à minha lista">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card">
+                                <img src="./filme7.jpg" alt="Título BR 5">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="content-controls">
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Mais informações">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Adicionar à minha lista">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card">
+                                <img src="./filme2.jpg" alt="Título BR 6">
+                                <div class="content-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="content-controls">
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Mais informações">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                    <button class="btn-icon" data-bs-toggle="tooltip" title="Adicionar à minha lista">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-arrow slider-arrow-right">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-fluid px-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="footer-links">
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href="#">Centro de Ajuda</a></li>
+                        <li><a href="#">Conta</a></li>
+                        <li><a href="#">Imprensa</a></li>
+                        <li><a href="#">Relações com investidores</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Resgatar cartão pré-pago</a></li>
+                        <li><a href="#">Comprar cartão pré-pago</a></li>
+                        <li><a href="#">Formas de assistir</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                        <li><a href="#">Preferências de cookies</a></li>
+                        <li><a href="#">Informações corporativas</a></li>
+                        <li><a href="#">Entre em contato</a></li>
+                        <li><a href="#">Avisos legais</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="copyright">© 2025 Netflix Clone. Projeto acadêmico.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="btn-back-to-top" class="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
